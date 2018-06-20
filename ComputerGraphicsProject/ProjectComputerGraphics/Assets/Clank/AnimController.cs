@@ -6,11 +6,12 @@ public class AnimController : MonoBehaviour
     Animator m_Animator;
     //int m_AnimState = 0;
     private int AnimState;
+    private float m_speed;
     private bool isWalking;
     private bool isRunning;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
 
         m_Animator = GetComponent<Animator>(); // gets animator component
@@ -23,6 +24,8 @@ public class AnimController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_speed = m_Animator.speed;
+
         if(Input.GetKey(KeyCode.W)
             || Input.GetKey(KeyCode.A)
             || Input.GetKey(KeyCode.S)
