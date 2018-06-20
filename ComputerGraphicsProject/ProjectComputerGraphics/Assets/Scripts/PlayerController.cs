@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     // Able to rotate on the Y
     Vector3 m_EulerAngleVelocity;
 
+    // Transform for behind the player
+    Transform behindPlayerTransform;
+
 
 
 
@@ -39,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
         //Set the axis the Rigidbody rotates in (100 in the y axis)
         m_EulerAngleVelocity = new Vector3(0, 100, 0);
+
+        //behindPlayerTransform = new Transform()
     }
 
     //-------------------------------------------------------------------------------------
@@ -56,7 +61,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            m_rigidBody.AddForce(new Vector3(-transform.forward.x * moveSpeed, 0, -transform.forward.z * moveSpeed), ForceMode.Acceleration);
+            //m_rigidBody.transform.LookAt()
+            //m_rigidBody.AddForce(new Vector3(-transform.forward.x * moveSpeed, 0, -transform.forward.z * moveSpeed), ForceMode.Acceleration);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
