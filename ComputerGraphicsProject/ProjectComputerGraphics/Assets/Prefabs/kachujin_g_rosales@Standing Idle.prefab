@@ -942,6 +942,7 @@ GameObject:
   - component: {fileID: 95020992781423346}
   - component: {fileID: 65878282246581772}
   - component: {fileID: 114751572050490142}
+  - component: {fileID: 114654948014914812}
   m_Layer: 0
   m_Name: kachujin_g_rosales@Standing Idle
   m_TagString: Untagged
@@ -2079,6 +2080,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114654948014914812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847960235753038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf81801e047d18e4cad89d1df8a3e5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBall: {fileID: 1030483701909892, guid: 371ac4fb7faec7b479135e8a3f82cbe7, type: 2}
+  delayForShoot: 0.1
+  shootPower: 50
 --- !u!114 &114751572050490142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2090,6 +2105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ca9dfa6456b5546aa3749f37df0c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 0.01
 --- !u!137 &137048264641422788
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

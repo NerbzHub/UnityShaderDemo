@@ -535,30 +535,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389216014}
---- !u!1 &401944801 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1847960235753038, guid: 5904d085d9151b74c9a1f71fb14a18ab,
-    type: 2}
-  m_PrefabInternal: {fileID: 1997654139}
 --- !u!4 &401944803 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4954095663247662, guid: 5904d085d9151b74c9a1f71fb14a18ab,
     type: 2}
   m_PrefabInternal: {fileID: 1997654139}
---- !u!114 &401944806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 401944801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf81801e047d18e4cad89d1df8a3e5f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireBall: {fileID: 1030483701909892, guid: 371ac4fb7faec7b479135e8a3f82cbe7, type: 2}
-  delayForShoot: 0.25
-  shootPower: 50
 --- !u!1 &412119618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2339,11 @@ Prefab:
     - target: {fileID: 4954095663247662, guid: 5904d085d9151b74c9a1f71fb14a18ab, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114654948014914812, guid: 5904d085d9151b74c9a1f71fb14a18ab,
+        type: 2}
+      propertyPath: delayForShoot
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5904d085d9151b74c9a1f71fb14a18ab, type: 2}
