@@ -47,6 +47,15 @@ public class AnimController : MonoBehaviour
             m_Animator.SetBool("isRunning", false);
         }
 
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            m_Animator.SetBool("LClickDown", true);
+        }
+        else
+        {
+            m_Animator.SetBool("LClickDown", false);
+        }
+
 
         //if (Input.GetKeyDown(KeyCode.Alpha0))
         //{
