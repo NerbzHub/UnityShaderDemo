@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonFunctions : MonoBehaviour
 {
     public GameObject postProcCamera;
+
     private UnityEngine.PostProcessing.PostProcessingBehaviour postProcBehaviour;
     // Use this for initialization
     void Start()

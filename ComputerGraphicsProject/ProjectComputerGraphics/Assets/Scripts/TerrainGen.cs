@@ -21,6 +21,13 @@ public class TerrainGen : MonoBehaviour
     {
         Terrain terrain = GetComponent<Terrain>();
         terrain.terrainData = GenerateTerrain(terrain.terrainData);
+
+        offsetX += 0.01f;
+        offsetY += 0.01f;
+        if (offsetX >= 9998.0f)
+            offsetX = 100f;
+        if (offsetY >= 9998.0f)
+            offsetY = 100f;
     }
 
     TerrainData GenerateTerrain(TerrainData terrainData)

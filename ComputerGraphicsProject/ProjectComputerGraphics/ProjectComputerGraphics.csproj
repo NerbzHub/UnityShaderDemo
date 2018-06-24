@@ -340,6 +340,7 @@
     <Compile Include="Assets\Scripts\ButtonFunctions.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CameraLookAt.cs" />
+    <Compile Include="Assets\Scripts\CameraShader.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerSpells.cs" />
     <Compile Include="Assets\Scripts\RosalesAnimController.cs" />
@@ -393,6 +394,8 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\Shaders\Holo.shader" />
+    <None Include="Assets\Shaders\ShakeyImg.shader" />
+    <None Include="Assets\Shaders\TransparentGround.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
