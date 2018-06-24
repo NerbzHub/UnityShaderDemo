@@ -4,8 +4,6 @@ public class AnimController : MonoBehaviour
 {
 
     Animator m_Animator;
-    //int m_AnimState = 0;
-    private int AnimState;
     private float m_speed;
     private bool isWalking;
     private bool isRunning;

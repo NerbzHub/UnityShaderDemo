@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class PlayerSpells : MonoBehaviour
 {
-    public GameObject fireBall;
-    public GameObject shooterPos;
-    public float delayForShoot;
-    public float shootPower;
+    public GameObject lightning;
+
+    public float delayForCast;
+    public float castLength;
+
     private Rigidbody rosalesRb;
     //private float timer;
 
     // Use this for initialization
     void Start()
     {
-        rosalesRb = gameObject.GetComponent<Rigidbody>();
+        //rosalesRb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,14 +23,20 @@ public class PlayerSpells : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Invoke("ShootFireball", delayForShoot);
+            Invoke("ShootFireball", delayForCast);
 
         }
     }
 
     private void ShootFireball()
     {
-        GameObject fireball = Instantiate(fireBall, shooterPos.transform.position, Quaternion.identity);
-        fireball.GetComponent<Rigidbody>().AddForce(shooterPos.transform.forward * shootPower, ForceMode.Impulse);
+        lightning.SetActive(true);
+        Invoke("EndOfSpell", castLength);
+        
+    }
+
+    private void EndOfSpell()
+    {
+        lightning.SetActive(false);
     }
 }
