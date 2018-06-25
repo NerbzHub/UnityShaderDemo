@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectComputerGraphics", "ProjectComputerGraphics.csproj", "{315511A1-A21C-71BB-2714-5F430314A24C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectComputerGraphics.Editor", "ProjectComputerGraphics.Editor.csproj", "{66FB71CE-2E28-116C-5A37-FE99A75DFD7E}"

@@ -24,9 +24,9 @@ public class TerrainGen : MonoBehaviour
 
         offsetX += 0.01f;
         offsetY += 0.01f;
-        if (offsetX >= 9998.0f)
+        if (offsetX >= 999999998.0f)
             offsetX = 100f;
-        if (offsetY >= 9998.0f)
+        if (offsetY >= 999999998.0f)
             offsetY = 100f;
     }
 
