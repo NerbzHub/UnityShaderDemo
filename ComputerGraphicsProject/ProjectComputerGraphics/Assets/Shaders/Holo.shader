@@ -1,4 +1,16 @@
-﻿Shader "Unlit/Holo"
+﻿/*
+	Holo.shader
+
+	Purpose: To create a shader that can take in a texture,
+			add transparency, add a colour tint, and if there
+			is a section of the texture that is very black, cull
+			it.
+			Also added the capacity to move the verts side to side
+			out of when the game is running.
+
+	@author Nathan Nette
+*/
+Shader "NathansShaders/Holo"
 {
 	Properties
 	{
@@ -16,7 +28,7 @@
 		_Amplitute("Amplitude", float) = 1
 		//How fast they move
 		_Speed ("Speed", float) = 1
-		// 
+		// Amount of movement with the animation.
 		_Amount("Amount", Range(0.0,1.0)) = 1
 
 	}
@@ -35,7 +47,7 @@
 			// Not write to depth buffer
 			ZWrite Off
 
-			// blend them using the alpha channel
+			// Blend them using the alpha channel
 			Blend SrcAlpha OneMinusSrcAlpha
 
 		Pass

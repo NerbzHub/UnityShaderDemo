@@ -1,4 +1,16 @@
-﻿Shader "Unlit/TransparentGround"
+﻿/*
+	TransparentGround.shader
+
+		Purpose: To create a shader that can take in a texture,
+				add transparency, add a colour tint.
+				The reason I wanted this shader was so that I could
+				place the procedurally generated terrain UNDER the
+				main ground plane. This meant I needed to be able to 
+				see through the ground. So I created this shader.
+
+	@author Nathan Nette
+*/
+Shader "NathansShaders/TransparentGround"
 {
 	Properties
 	{
@@ -30,7 +42,9 @@
 		Pass
 		{
 			CGPROGRAM
+			//Vertex function called vert
 			#pragma vertex vert
+			//Fragment function called frag
 			#pragma fragment frag
 			
 			#include "UnityCG.cginc"
@@ -44,9 +58,12 @@
 			struct v2f
 			{
 				float2 uv : TEXCOORD0;
+				// Screen space position (SV needed for playstation)
 				float4 vertex : SV_POSITION;
 			};
 
+			// Any data from the editor needs to be re-created here 
+			// inside the actual CG code so that it can access it.
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			float4 _TintColour;
@@ -54,15 +71,24 @@
 			
 			v2f vert (appdata v)
 			{
+				// what we're going to pass out of the vert func into
+				// the frag (v2f is Vert to Frag).
 				v2f o;
+				// Used to be mul but now unity made this function.
 				o.vertex = UnityObjectToClipPos(v.vertex);
+				// Applying the texture to the object's UV coords
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				return o;
 			}
-			
+
+			// Frag shader is working with potential pixels.
+
+			// Takes in v2f (SV target is a render target)
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
+				// tex2D reads in the texture's colours and the object's UVs
+				// * transparency then add the tint colour.
 				fixed4 col = tex2D(_MainTex, i.uv * _Transparency) + _TintColour;
 				return col;
 			}
